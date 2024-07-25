@@ -88,3 +88,51 @@ curl -i -X POST "https://abc12345.live.dynatrace.com/platform/ingest/v1/events.s
      -H "Authorization: Api-Token dt0c01.*****.****" ^
      -d "{\"event.type\":\"test\", \"event.category\":\"finished\", \"service\": \"frontend\", \"duration\": \"30m\"}"
 ```
+
+## Enable Auto Baselines
+
+Objectives that are set to "auto baseline" in Dynatrace Site Reliability Guardians require `5` runs in order to enable the baselines.
+
+Trigger 5 seperate "load tests" now to enable this to occur.
+
+First, apply the load test script:
+
+```
+kubectl apply -f .devcontainer/k6/k6-load-test-script.yaml
+```
+
+Trigger the first load test:
+
+```
+kubectl apply -f .devcontainer/k6/k6-srg-training-run1.yaml
+```
+
+Wait a few seconds and trigger the second job:
+
+```
+kubectl apply -f .devcontainer/k6/k6-srg-training-run2.yaml
+```
+
+Wait a few seconds and trigger the third job:
+
+```
+kubectl apply -f .devcontainer/k6/k6-srg-training-run3.yaml
+```
+
+Wait a few seconds and trigger the fourth job:
+
+```
+kubectl apply -f .devcontainer/k6/k6-srg-training-run4.yaml
+```
+
+Wait a few seconds and trigger the final training job:
+
+```
+kubectl apply -f .devcontainer/k6/k6-srg-training-run5.yaml
+```
+
+Each load test runs for 1 minute so keep running the following until you see all jobs listed as `Complete`:
+
+```
+kubectl get jobs
+```
