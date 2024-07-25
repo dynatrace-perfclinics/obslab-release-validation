@@ -7,7 +7,7 @@ You must have the following to follow this hands on demo.
 1. A Dynatrace environment ([sign up here](https://dynatrace.com/trial))
 1. A Dynatrace API token (see below)
 
-Save the Dynatrce environment URL **without** the trailing slash: eg. `https://abc12345.live.dynatrace.com`
+Save the Dynatrace environment URL **without** the trailing slash: eg. `https://abc12345.live.dynatrace.com`
 
 ### Create API Token
 In Dynatrace:
