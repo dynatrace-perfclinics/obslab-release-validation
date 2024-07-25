@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CREATE_CLUSTER_WAIT=300s
-OTEL_DEMO_VERSION=0.32.0
+OTEL_DEMO_VERSION=0.32.3
 
 ####################################
 # Note:
