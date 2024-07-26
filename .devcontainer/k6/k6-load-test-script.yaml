@@ -42,7 +42,8 @@ data:
         "event.type": "test",
         "event.category": "finished",
         "training": `${__ENV.TRAINING_MODE}`,
-        "duration": test_duration
+        "duration": test_duration,
+        "service": "frontend"
       }
       let res = http.post(`${__ENV.K6_DYNATRACE_URL}/platform/ingest/v1/events.sdlc`, JSON.stringify(payload), post_params);
     }
