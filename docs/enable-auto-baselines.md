@@ -57,6 +57,34 @@ Each load test runs for 1 minute so keep running the following command until you
 kubectl get jobs
 ```
 
+```
+@agardnerIT ➜ /workspaces/demo-release-validation (main) $ kubectl get jobs
+NAME               STATUS     COMPLETIONS   DURATION   AGE
+k6-training-run1   Complete   1/1           95s        2m2s
+k6-training-run2   Complete   1/1           93s        115s
+k6-training-run3   Complete   1/1           93s        108s
+k6-training-run4   Complete   1/1           90s        100s
+k6-training-run5   Complete   1/1           84s        94s
+```
+
+## View Completed Training Runs
+
+In Dynatrace, go to workflows and select `Executions`. You should see 5 successful workflow executions:
+
+![dynatrace training runs](images/dt-workflows-training-complete.png)
+
+### View SRG Status using DQL
+
+You can also use this DQL to see the Site Reliability Guardian results in a notebook:
+
+```
+fetch bizevents
+| filter event.provider == "dynatrace.site.reliability.guardian"
+| filter event.type == "guardian.validation.finished"
+| fieldsKeep guardian.id, validation.id, timestamp, guardian.name, validation.status, validation.summary, validation.from, validation.to
+```
+
+![dynatrace view SRG results in a notebook](images/dt-notebook-view-srg-results.png)
 The automatic baselines for the guardian are now enabled. You can proceed to use the guardian for "real" evaluations.
 
 ## [Click Here to Continue...](enable-auto-baselines.md)

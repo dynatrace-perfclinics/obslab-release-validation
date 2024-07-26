@@ -18,6 +18,11 @@ kubectl -n default wait --for=condition=Ready --all --timeout 300s pod
 
 ## Access Demo User Interface
 
+
+```
+## TODO: Improve UX? Use Ingress?
+```
+
 Start port forwarding to access the user interface:
 
 ```
