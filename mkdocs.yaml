@@ -1,0 +1,17 @@
+site_name: "Dynatrace Observability Lab: Release Validation"
+nav:
+  - '1. About': index.md
+  - '2. Getting Started': getting-started.md
+  - '3. Validate Telemetry': validate-telemetry.md
+  - '4. Create SRG': create-srg.md
+  - '5. Automate SRG': automate-srg.md
+  - '6. Enable Automatic Baselines': enable-auto-baselines.md
+  - '7. Cleanup': cleanup.md
+  - '8. Resources': resources.md
+  - "9. What's Next?": whats-next.md
+theme:
+  name: material
+markdown_extensions:
+  - attr_list 
+  - toc:
+      permalink: '#'
