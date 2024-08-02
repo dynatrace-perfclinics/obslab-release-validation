@@ -24,4 +24,17 @@ This load test will run for 3 minutes and then trigger the site reliability guar
 kubectl apply -f .devcontainer/k6/k6-after-change.yaml
 ```
 
+## Configuration Change Events
+
+While you are waiting for the load test to complete, it is worth noting that each time a feature flag is changed, the `runtimeChange.sh` shell script sends an event to the service that is affected.
+
+The feature flag changes the behaviour of the `paymentservice` (which the `checkoutservice` depends on).
+
+Look at the `paymentservice` and notice the configuration changed events noted.
+
+Dynatrace AI uses these events as part of the root cause analysis engine.
+
+You can send event for anything you like: deployments, load tests, security scans, configuration changes and more.
+
+![payment service event](images/paymentservice-event.png)
 ## [What's Next?](whats-next.md)
