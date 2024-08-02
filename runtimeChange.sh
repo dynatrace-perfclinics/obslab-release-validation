@@ -35,8 +35,11 @@ curl -X POST "$DT_ENDPOINT_UC14/api/v2/events/ingest" \
 # 5. Add a pipe and newline to result and use yq to edit flags.yaml inplace
 # 6. kubectl apply the changed file
 ##############
-RESULT=$(yq '.data["demo.flagd.json"]' .devcontainer/otel-demo/flags.yaml | jq ".flags.$1.defaultVariant = \"$2\"")
-RESULT=$(echo "|\n  $RESULT") yq -i '.data["demo.flagd.json"] = env(RESULT)' .devcontainer/otel-demo/flags.yaml
+RESULT=$(yq '.data["demo.flagd.json"]' .devcontainer/otel-demo/flags.yaml | yq ".flags.$1.defaultVariant = \"$2\"")
+res=$RESULT yq -i '.data["demo.flagd.json"] = env(res)' .devcontainer/otel-demo/flags.yaml
+sed -i 's/  demo.flagd.json: /  demo.flagd.json: |\n    /g' .devcontainer/otel-demo/flags.yaml
+
+# Apply changes
 kubectl apply -f .devcontainer/otel-demo/flags.yaml
 
 echo "flag: $1 property: defaultVariant set to value: $2 revert value (in case of problems): $3"
