@@ -51,7 +51,7 @@ data:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: run-k6
+  name: acceptable-load-test
 spec:
   template:
     spec:
