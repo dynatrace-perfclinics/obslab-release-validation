@@ -2,7 +2,7 @@
 # Usage: ./runtimeChange.sh flagKey newFlagValue remediationValueIfFailure
 # eg. ./runtimeChange.sh paymentServiceFailure on off
 
-echo "Changing $1 to $2 but in case of failure, revert back to $3"
+echo "Changing feature flag key: $1 to $2"
 
 ##############
 # Step 1
@@ -18,9 +18,7 @@ curl -X POST "$DT_ENDPOINT_UC14/api/v2/events/ingest" \
   \"properties\": {
     \"type\": \"configuration_change\",
     \"feature_flag.key\": \"$1\",
-    \"defaultValue\": \"$2\",
-    \"remediation.feature_flag.key\": \"$1\",
-    \"remediation.defaultValue\": \"$3\"
+    \"defaultValue\": \"$2\"
   }
 }"
 
@@ -42,4 +40,4 @@ sed -i 's/  demo.flagd.json: /  demo.flagd.json: |\n    /g' .devcontainer/otel-d
 # Apply changes
 kubectl apply -f .devcontainer/otel-demo/flags.yaml
 
-echo "flag: $1 property: defaultVariant set to value: $2 revert value (in case of problems): $3"
+echo "flag: $1 property: defaultVariant set to value: $2"
