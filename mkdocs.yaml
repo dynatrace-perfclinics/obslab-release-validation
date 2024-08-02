@@ -8,9 +8,10 @@ nav:
   - '6. Enable Automatic Baselines': enable-auto-baselines.md
   - '7. Run a Production SRG': run-production-srg.md
   - '8. Make a Change': enable-change.md
-  - '9. Cleanup': cleanup.md
-  - '10. Resources': resources.md
-  - "11. What's Next?": whats-next.md
+  - '9. View Acceptance Test Results': view-acceptance-test-results.md
+  - '10. Cleanup': cleanup.md
+  - '11. Resources': resources.md
+  - "12. What's Next?": whats-next.md
 theme:
   name: material
 markdown_extensions:

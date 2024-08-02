@@ -37,4 +37,6 @@ Dynatrace AI uses these events as part of the root cause analysis engine.
 You can send event for anything you like: deployments, load tests, security scans, configuration changes and more.
 
 ![payment service event](images/paymentservice-event.png)
-## [What's Next?](whats-next.md)
+
+
+## [Click Here to Continue...](view-acceptance-test-results.md)

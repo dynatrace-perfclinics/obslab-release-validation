@@ -6,7 +6,7 @@
 
 In this demo, you take on the role of a Site Reliability Engineer (SRE). You are running an application, consisting of a number of microservices.
 
-The application is already instrumented to emit good tracing data, using the [OpenTelemetry](https://opentelemetry.io){target="_blank"} standard. The demo system will be automatically configured to transport that data to Dynatrace for storage and processing.
+The application is already instrumented to emit tracing data, using the [OpenTelemetry](https://opentelemetry.io){target="_blank"} standard. The demo system will be automatically configured to transport that data to Dynatrace for storage and processing.
 
 Your job is to:
 
@@ -20,7 +20,7 @@ To achieve these objectives, you will:
 
 ## A New Release
 
-Your company utilises feature flags to enable new features. The product managers inform you that they wish to release a new feature.
+Your company utilises feature flags to enable new features. A poroduct manager informs you that they wish to release a new feature.
 
 It is your job to:
 
