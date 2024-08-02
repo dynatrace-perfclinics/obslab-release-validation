@@ -1,3 +1,19 @@
+A product manager informs you that they're ready to release their new feature to the world. They ask you to enable the feature and run the load test test in a dev environment.
+
+They tell you that the new feature is behind a flag called `paymentServiceFailure` (yes, an obvious name for this demo) and they tell you to change the `defaultValue` from `off` to `on`.
+
+## Update the Feature Flag and Inform Dynatrce
+
+Run the following script which:
+
+- Notifies Dynatrace using a `CUSTOM_INFO` event of the change inc. the new value and the remediation info should a problem occur
+- Changes the `defaultValue` of the `paymentServiceFailure` feature flag to `on`
+- Applies the configuration change
+
+```
+./runtimeChange.sh paymentServiceFailure on off
+```
+
 # Enable Automatic Baselining for Site Reliability Guardian
 
 Objectives that are set to "auto baseline" in Dynatrace Site Reliability Guardians require `5` runs in order to enable the baselines.
@@ -6,7 +22,7 @@ In a real scenario, these test runs would likely be spread over hours, days or w
 
 For demo purposes, 5 seperate "load tests" will be triggered in quick succession to enable the baselining.
 
-First, open a new terminal window and apply the load test script:
+First, apply the load test script:
 
 ```
 kubectl apply -f .devcontainer/k6/k6-load-test-script.yaml
@@ -69,7 +85,7 @@ k6-training-run5   Complete   1/1           84s        94s
 
 ## View Completed Training Runs
 
-In Dynatrace, go to `workflows` and select `Executions`. You should see 5 successful workflow executions:
+In Dynatrace, go to workflows and select `Executions`. You should see 5 successful workflow executions:
 
 ![dynatrace training runs](images/dt-workflows-training-complete.png)
 
@@ -85,22 +101,6 @@ fetch bizevents
 ```
 
 ![dynatrace view SRG results in a notebook](images/dt-notebook-view-srg-results.png)
+The automatic baselines for the guardian are now enabled. You can proceed to use the guardian for "real" evaluations.
 
-## View SRG Status in the Site Reliability Guardian App
-The SRG results are also available in the Site Reliabiltiy Guardian app:
-
-* Press `ctrl + k`
-* Search for `site reliability guardian` or `srg`
-* Open the app and click `Open` on your guardian
-
-You should see the `5` runs listed:
-
-![srg training runs](images/dt-srg-training-runs.png)
-
-## Training Complete
-
-The automatic baselines for the guardian are now enabled.
-
-You can proceed to use the guardian for "real" evaluations.
-
-## [Click Here to Continue...](run-production-srg.md)
+## [Click Here to Continue...](enable-change.md)

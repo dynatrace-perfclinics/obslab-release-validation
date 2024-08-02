@@ -14,7 +14,7 @@ We will create a guardian to check the `frontend` microservice that the user int
 
 ![dynatrace site reliability guardian: screen 1](images/dt-srg-screen-1.png)
 ![dynatrace site reliability guardian: screen 2](images/dt-srg-screen-2.png)
-![dynatrace site reliability guardian: screen 3](images/dt-srg-screen-3.png)
+![dynatrace site reliability guardian: screen 3](images/dt-srg-screen-3.png) # TODO: Update screenshot to highlight `frontend` not `frontend-web`
 ![dynatrace site reliability guardian: screen 4](images/dt-srg-screen-4.png)
 ![dynatrace site reliability guardian: screen 5](images/dt-srg-screen-5.png)
 

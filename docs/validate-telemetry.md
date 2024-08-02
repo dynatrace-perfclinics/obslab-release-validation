@@ -26,7 +26,6 @@ kubectl -n default wait --for=condition=Ready --all --timeout 300s pod
 Start port forwarding to access the user interface:
 
 ```
-
 kubectl -n default port-forward svc/my-otel-demo-frontendproxy 8080
 ```
 
@@ -87,7 +86,7 @@ fetch logs, scanLimitGBytes: 1
 
 If these four things are OK, your telemetry is flowing correctly into Dynatrace.
 
-If not, please [search for similar problems and / or raise an issue here](https://github.com/dynatrace-perfclinics/demo-release-validation/issues){target="_blank"}.
+If not, please [search for similar problems and / or raise an issue here](https://github.com/dynatrace-perfclinics/obslab-release-validation/issues){target="_blank"}.
 
 ```
 # TODO: Make this a better UX? Provide a fix script?

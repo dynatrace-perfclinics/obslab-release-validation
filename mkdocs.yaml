@@ -6,9 +6,11 @@ nav:
   - '4. Create SRG': create-srg.md
   - '5. Automate SRG': automate-srg.md
   - '6. Enable Automatic Baselines': enable-auto-baselines.md
-  - '7. Cleanup': cleanup.md
-  - '8. Resources': resources.md
-  - "9. What's Next?": whats-next.md
+  - '7. Run a Production SRG': run-production-srg.md
+  - '8. Make a Change': enable-change.md
+  - '9. Cleanup': cleanup.md
+  - '10. Resources': resources.md
+  - "11. What's Next?": whats-next.md
 theme:
   name: material
 markdown_extensions:

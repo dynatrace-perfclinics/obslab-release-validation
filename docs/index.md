@@ -30,4 +30,8 @@ It is your job to:
 * Make the "go / no go" decision for that feature.
 * Provide feedback to the product managers on why you made the decision you did.
 
+## TODO
+
+- `cURL` on startup to create metric event.
+
 ## [Click Here to Begin...](getting-started.md)

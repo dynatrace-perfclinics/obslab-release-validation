@@ -42,10 +42,28 @@ Ensure you are still on the `Three golden signals (frontend)` screen.
 
 * Click the `Automate` button. This will create a template workflow.
 * Change the `event type` from `bizevents` to `events`.
-* Change the `Filter query` to `event.type == "test" AND event.category == "finished" AND service == "frontend"`.
+* Change the `Filter query` to:
+
+```
+event.type == "test"
+AND event.category == "finished"
+AND service == "frontend"
+```
+
 * Click the `run_validation` node.
-* Remove `event.timeframe.from` and type `now-{{ event()['duration']}}`. The UI will change this to `now-event.duration`.
-* Remove `event.timeframe.to` and type `now`.
+* Remove `event.timeframe.from` and replace with:
+
+```
+now-{{ event()['duration']}}
+```
+
+The UI will change this to `now-event.duration`.
+
+* Remove `event.timeframe.to` and replace with:
+```
+now
+```
+
 * Click the `Save` button.
 
 The workflow is now created and connected to the guardian. It will be triggered whenever the platform receives an event like below.
