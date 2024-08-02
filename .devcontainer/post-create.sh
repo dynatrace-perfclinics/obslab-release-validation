@@ -27,6 +27,9 @@ sed -i "s,GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN_PLACEHOLDER,$GITHUB_CODESPACE
 # Replace placeholders in k6 Kubernetes YAML with realtime values
 sed -i "s,CODESPACE_NAME_PLACEHOLDER,$CODESPACE_NAME," .devcontainer/k6/k6-load-test-script.yaml
 sed -i "s,GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN_PLACEHOLDER,$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN," .devcontainer/k6/k6-load-test-script.yaml
+# Replace placeholders in k6 Kubernetes YAML with realtime values
+sed -i "s,CODESPACE_NAME_PLACEHOLDER,$CODESPACE_NAME," .devcontainer/k6/k6-after-change.yaml
+sed -i "s,GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN_PLACEHOLDER,$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN," .devcontainer/k6/k6-after-change.yaml
 
 # Create Cluster
 kind create cluster --config .devcontainer/kind-cluster.yaml --wait $CREATE_CLUSTER_WAIT

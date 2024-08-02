@@ -1,4 +1,4 @@
-A product manager informs you that they're ready to release their new feature to the world. They ask you to enable the feature and run the load test test in a dev environment.
+A product manager informs you that they're ready to release their new feature. They ask you to enable the feature and run the load test in a dev environment.
 
 They tell you that the new feature is behind a flag called `paymentServiceFailure` (yes, an obvious name for this demo) and they tell you to change the `defaultValue` from `off` to `on`.
 
@@ -6,12 +6,12 @@ They tell you that the new feature is behind a flag called `paymentServiceFailur
 
 Run the following script which:
 
-- Notifies Dynatrace using a `CUSTOM_INFO` event of the change inc. the new value and the remediation info should a problem occur
+- Notifies Dynatrace using a `CUSTOM_INFO` event of the change inc. the new value
 - Changes the `defaultValue` of the `paymentServiceFailure` feature flag to `on`
 - Applies the configuration change
 
 ```
-./runtimeChange.sh paymentServiceFailure on off
+./runtimeChange.sh paymentServiceFailure on
 ```
 
 # Enable Automatic Baselining for Site Reliability Guardian

@@ -29,7 +29,7 @@ export function teardown() {
       "event.provider": "k6",
       "event.type": "test",
       "event.category": "finished",
-      "service": "frontend",
+      "service": "checkoutservice",
       "duration": test_duration
     }
     let res = http.post(`${__ENV.K6_DYNATRACE_URL}/platform/ingest/v1/events.sdlc`, JSON.stringify(payload), post_params);
@@ -38,7 +38,7 @@ export function teardown() {
 
 ## Create a Workflow to Trigger Guardian
 
-Ensure you are still on the `Three golden signals (frontend)` screen.
+Ensure you are still on the `Three golden signals (checkoutservice)` screen.
 
 * Click the `Automate` button. This will create a template workflow.
 * Change the `event type` from `bizevents` to `events`.
@@ -47,7 +47,7 @@ Ensure you are still on the `Three golden signals (frontend)` screen.
 ```
 event.type == "test"
 AND event.category == "finished"
-AND service == "frontend"
+AND service == "checkoutservice"
 ```
 
 * Click the `run_validation` node.

@@ -15,7 +15,7 @@ Your job is to:
 
 To achieve these objectives, you will:
 
-* Create a Site Reliability Guardian to test and ensure the health of your microservices (starting with the most user impacting service - the `frontend`)
+* Create a Site Reliability Guardian to test and ensure the health of your microservices (starting with the most user impacting service - the `checkoutservice`)
 * Use the auto baselining capability of Dynatrace to suggest (and dynamically adjust) thresholds based on current and past performance.
 
 ## A New Release
