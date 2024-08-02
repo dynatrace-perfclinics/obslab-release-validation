@@ -41,7 +41,7 @@ data:
         "event.provider": "k6",
         "event.type": "test",
         "event.category": "finished",
-        "training": `${__ENV.TRAINING_MODE}`,
+        "purpose": `${__ENV.LOAD_TEST_PURPOSE}`,
         "duration": test_duration,
         "service": "checkoutservice"
       }
@@ -74,8 +74,8 @@ spec:
               secretKeyRef:
                 name: dt-details
                 key: DT_API_TOKEN_UC14
-          - name: TRAINING_MODE
-            value: "false"
+          - name: LOAD_TEST_PURPOSE
+            value: "acceptance"
       volumes:
         - name: config-volume
           configMap:

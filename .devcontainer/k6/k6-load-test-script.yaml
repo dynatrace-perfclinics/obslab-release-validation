@@ -41,7 +41,7 @@ data:
         "event.provider": "k6",
         "event.type": "test",
         "event.category": "finished",
-        "training": `${__ENV.TRAINING_MODE}`,
+        "purpose": `${__ENV.LOAD_TEST_PURPOSE}`,
         "duration": test_duration,
         "service": "checkoutservice"
       }

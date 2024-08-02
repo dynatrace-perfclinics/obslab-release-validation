@@ -25,8 +25,8 @@ spec:
               secretKeyRef:
                 name: dt-details
                 key: DT_API_TOKEN_UC14
-          - name: TRAINING_MODE
-            value: "true"
+          - name: LOAD_TEST_PURPOSE
+            value: "training"
       volumes:
         - name: config-volume
           configMap:
