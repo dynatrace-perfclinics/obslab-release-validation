@@ -51,7 +51,7 @@ data:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: acceptable-load-test
+  name: acceptance-load-test
 spec:
   template:
     spec:
