@@ -52,7 +52,7 @@
 	            "description": "eg. https://abc12345.live.dynatrace.com"
 		},
 		  "DT_API_TOKEN_UC14": {
-	    	    "description": "Dynatrace API token with these permissions: `metrics.ingest`, `logs.ingest`, `openTelemetryTrace.ingest`, `openpipeline.events_sdlc`"
+	    	    "description": "Dynatrace API token with these permissions: `metrics.ingest`, `logs.ingest`, `openTelemetryTrace.ingest`, `events.ingest`"
 		}
 	}
 }
