@@ -20,7 +20,7 @@ To achieve these objectives, you will:
 
 ## A New Release
 
-Your company utilises feature flags to enable new features. A poroduct manager informs you that they wish to release a new feature.
+Your company utilises feature flags to enable new features. A product manager informse you that they wish to release a new feature.
 
 It is your job to:
 
