@@ -2,7 +2,7 @@
 
 You must have the following to use this hands on demo.
 
-* A Dynatrace environment ([sign up here](https://dynatrace.com/trial){target="_blank"})
+* A Dynatrace environment ([sign up here](https://dt-url.net/trial){target="_blank"})
 * A Dynatrace API token (see below)
 
 Save the Dynatrace environment URL **without** the trailing slash and without the `.apps.` in the URL:

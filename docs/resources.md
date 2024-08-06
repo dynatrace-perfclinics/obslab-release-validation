@@ -1,3 +1,3 @@
 # Resources
 
-Links to resources, docs, blog posts, videos, presentations etc.
+- [This repository and documentation on GitHub](https://github.com/dynatrace-perfclinics/obslab-release-validation)

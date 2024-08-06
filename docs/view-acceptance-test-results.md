@@ -42,10 +42,10 @@ exception.type	Error
 
 ## Roll Back Change
 
-Roll back to the change:
+Roll back the change:
 
 ```
-./runtimeChange.sh paymentServiceFailure off
+./runtimeChange.sh paymentServiceFailure off off
 ```
 
 ## Summary
