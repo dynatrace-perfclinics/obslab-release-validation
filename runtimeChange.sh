@@ -1,6 +1,6 @@
 #!/bin/bash
 # Usage: ./runtimeChange.sh flagKey newFlagValue remediationValueIfFailure
-# eg. ./runtimeChange.sh paymentServiceFailure on off
+# eg. ./runtimeChange.sh paymentServiceFailure on
 
 echo "Changing feature flag key: $1 to $2"
 
